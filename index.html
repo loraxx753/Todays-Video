@@ -14,27 +14,32 @@
 <body>
     <header>
         <h1>Silence 🤫</h1>
-        <p>&lt;json-swagger&gt;&lt;/json-swagger&gt; should equal 2.0, It is <json-swagger></json-sawgger></p>
+        <json-info>
+            <h1><info-title></info-title> -- Version <info-version></info-version></h1>
+            <p><json-host></json-host></p>
+            <info-description markdown></info-description>
+            
+            <ul>
+                <li><info-license>
+                        <license-name></license-name>
+                    </info-license> License
+                </li>
+                <li><info-contact></info-contact></li>
+            </ul>
+        </json-info>
     </header>
-
 
     <main>
         <section>
-            <h2>Swagger</h2>
-            <p><json-swagger></json-swagger></p>
-            <h2>Info</h2>
-            <json-info>
-                <ul>
-                    <li>Description: <info-description></info-description></li>
-                    <li>Version: <info-version></info-version></li>
-                    <li>Title: <info-title></info-title></li>
-                    <li>Terms Of Service: <info-termsOfService></info-termsOfService></li>
-                    <li>Contact: <info-contact><contact-email></contact-email></info-contact></li>
-                    <li>License: <info-license><license-name></license-name></info-license></li>
-                </ul>
-            </json-info>
+            <h2>Column 1</h2>
+            <ul>
+                <json-schemes>
+                    <li blueprint class="someClass"></li>
+                </json-schemes>        
+            </ul>
         </section>
         <aside>
+            <h2>Column 2</h2>
             <json-debug></json-debug>
         </aside>
     

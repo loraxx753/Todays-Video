@@ -1,13 +1,1 @@
 @import url('./assets/styles/main.css');
-
-pre {
-    display: inline-block;
-}
-
-ol li:first-child {
-    counter-reset: my-counter;
-}
-ol li::before {
-    content: counter(my-counter) ". ";
-	counter-increment: my-counter;
-}

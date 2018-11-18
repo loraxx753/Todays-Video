@@ -1,3 +1,5 @@
+var converter = new showdown.Converter()
+
 /* This function is the start of nesting */
 const setJsonChildren = (element, object) => {
   const element_array = element.tagName.toLowerCase().split('-')
@@ -8,24 +10,43 @@ const setJsonChildren = (element, object) => {
     const el = element.querySelector(child_tag);
     if(el) {
       handleValueType(key, object[key], el);    
-    } else if(!element.firstChild) {
+    } else if (Array.isArray(object[key])) {
+      handleValueType(key, object, element)
+    } else if(!element.firstElementChild) {
       handleValueType(key, JSON.stringify(object, null, 2), element)
     }
   }
+}
+
+const buildFromArray = (element, items) => {
+  const template = element.querySelector('*[blueprint]')
+  console.log(template);
+  for(let item of items) {
+    const clone = template.cloneNode(true)
+    const textNode = document.createTextNode(item)
+    clone.appendChild(textNode)
+    element.insertBefore(clone, template)
+  }
+  template.parentElement.removeChild(template)
+
 }
 
 const handleValueType = (key, value, element) => {
   switch (typeof value) {
     case 'string':
     case 'number':
-      const textNode = document.createTextNode(value)
-      element.appendChild(textNode)
-      break;
-    case 'array':
-      console.log("it's an array")
+    
+      if(element.hasAttribute('markdown')) {
+        const markdown = converter.makeHtml(value);
+        element.innerHTML = markdown
+      } else {
+        const textNode = document.createTextNode(value)
+        element.appendChild(textNode)  
+      }
       break;
     case 'object':
-      setJsonChildren(element, value)
+      if(Array.isArray(value) && element.firstChild) buildFromArray(element, value)
+      else setJsonChildren(element, value)
       break;
     default:
       break;

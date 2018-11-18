@@ -1,9 +1,21 @@
 @import url('/assets/styles/theme.css');
 @import url('/assets/styles/base.css');
 
+pre {
+    display: inline-block;
+}
+
+ol li:first-child {
+    counter-reset: my-counter;
+}
+ol li::before {
+    content: counter(my-counter) ". ";
+	counter-increment: my-counter;
+}
+
 main {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 68vw 1fr;
     grid-column-gap: 1rem;
     overflow: hidden;
 }
