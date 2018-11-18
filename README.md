@@ -15,10 +15,8 @@ Plus, you can use the following syntax for any GET request that returns a json o
 
 ```html
 <json-{key}></json-{key}>
-``
+```
 Where `key` is the desired key name from the set json object.
-
---
 
 ## Quick Start
 
