@@ -42,4 +42,13 @@ function addScript(src, callback, options) {
     addScript('assets/scripts/main.js', function() {
     }, { type: "module" })
   }
+
+  if ('serviceWorker' in navigator && false) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker
+        .register('assets/scripts/web-workers/sw.js')
+        .then(reg => console.log('Service Worker is now registered'))
+        .catch(err => console.log(`Service Worker: Error: ${err}`))
+    })    
+  }
 })()

@@ -41,7 +41,8 @@ const handleValueType = (key, value, element) => {
         element.innerHTML = markdown
       } else {
         const textNode = document.createTextNode(value)
-        element.appendChild(textNode)  
+        if(element.hasAttribute('with-default')) element.innerHTML = value
+        else element.appendChild(textNode)  
       }
       break;
     case 'object':
