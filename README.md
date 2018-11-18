@@ -11,12 +11,12 @@ Where `key` is the desired key name from the set json object.
 
 ## Quick Start
 
-For the following json object ` { version: 2; } `, `<json-version></json-version>` will be populated with `2`.
+For the following json object ` { foo: "bar"; } `, `<json-foo></json-foo>` will be populated with `bar`.
 
 ## Example
 
 ```html
-<p>We're currently on <json-version></json-version>!</p>
+<h1><json-foo></json-foo>!</h1>
 ```
 
 Use [main.js](https://github.com/antiPhaseDomain/Silence/blob/master/assets/scripts/main.js) as if it were the main module file. 
