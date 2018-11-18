@@ -17,6 +17,7 @@ For the following json object ` { foo: "bar"; } `, `<json-foo></json-foo>` will 
 
 ```html
 <h1><json-foo></json-foo>!</h1>
+<!-- HTML DOM : <h1><json-foo>bar</json-foo> -->
 ```
 
 Use [main.js](https://github.com/antiPhaseDomain/Silence/blob/master/assets/scripts/main.js) as if it were the main module file. 
