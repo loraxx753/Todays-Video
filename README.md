@@ -9,7 +9,7 @@ _Now the template for [Panopticon](https://github.com/antiPhaseDomain/Panopticon
 ```
 Where `key` is the desired key name from the set json object.
 
-## Quick Start
+## Example
 
 ```html
 
