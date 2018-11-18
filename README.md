@@ -11,11 +11,21 @@ Where `key` is the desired key name from the set json object.
 
 ## Quick Start
 
-For the following json object ` { foo: "bar", biz: { baz: "boom", ka: "blooie" } } `, `<json-foo></json-foo>` will be populated with `bar` and `<json-biz><biz-baz></biz-baz></json-biz>` will populate with `boom`.
-
-## Example
-
 ```html
+
+<!-- JSON Object 
+
+{ 
+  foo: "bar", 
+  biz: { 
+    baz: "boom", 
+    ka: "blooie" 
+  } 
+}
+
+-->
+
+
 <h1><json-foo></json-foo>!</h1>
 <!-- HTML DOM : <h1><json-foo>bar</json-foo></h1> -->
 
