@@ -1,3 +1,4 @@
+/* This function is the start of nesting */
 const setJsonChildren = (element, object) => {
   const element_array = element.tagName.toLowerCase().split('-')
   element_array.shift();
@@ -10,9 +11,10 @@ const setJsonChildren = (element, object) => {
 }
 
 (async () => {
+  const url = "https://petstore.swagger.io/v2/swagger.json"
 
-  const json = await fetch("https://petstore.swagger.io/v2/swagger.json")
-  .then(resp => { return resp.json() });
+  const json = await fetch()
+  .then(resp => { return resp.json(url) });
 
   for(let key in json) { 
 
