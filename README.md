@@ -1,6 +1,6 @@
 # 🤫
 
-Also, a HTML Template for [Panopticon](https://github.com/antiPhaseDomain/Panopticon) to use!.
+_<small>Now the template for [Panopticon](https://github.com/antiPhaseDomain/Panopticon)!</small>_
 
 ## Silence Quickstart
 
