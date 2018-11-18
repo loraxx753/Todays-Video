@@ -13,7 +13,7 @@ const setJsonChildren = (element, object) => {
 (async () => {
   const url = "https://petstore.swagger.io/v2/swagger.json"
 
-  const json = await fetch()
+  const json = await fetch(url)
   .then(resp => { return resp.json(url) });
 
   for(let key in json) { 
