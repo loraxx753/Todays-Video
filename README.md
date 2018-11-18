@@ -1,6 +1,4 @@
-# Silence
-
-🤫
+# 🤫
 
 HTML Template for [Panopticon](https://github.com/antiPhaseDomain/Panopticon) to use.
 
