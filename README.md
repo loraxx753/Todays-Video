@@ -1,15 +1,8 @@
 # 🤫
 
-HTML Template for [Panopticon](https://github.com/antiPhaseDomain/Panopticon) to use.
+Also, a HTML Template for [Panopticon](https://github.com/antiPhaseDomain/Panopticon) to use!.
 
-## (Verified) Features
-
-* ES6/7
-* CSS Variables
-* CSS Filters
-* CSS Grid
-
-Plus, you can use the following syntax for any GET request that returns a json object:
+## Silence Quickstart
 
 ```html
 <json-{key}></json-{key}>
@@ -26,7 +19,7 @@ For the following json object ` { version: 2; } `, `<json-version></json-version
 <p>We're currently on <json-version></json-version>!</p>
 ```
 
-Use [main.js](https://github.com/antiPhaseDomain/Silence/blob/master/assets/scripts/main.js). Start your javascript from the bottom of this file.
+Use [main.js](https://github.com/antiPhaseDomain/Silence/blob/master/assets/scripts/main.js) as if it were the main module file. 
 
 ## Setting the JSON
 
