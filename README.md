@@ -24,8 +24,13 @@ For the following json object ` { version: 2; } `, `<json-version></json-version
 
 ## Example
 
-```
+```html
 <p>We're currently on <json-version></json-version>!</p>
-
 ```
+
+## Setting the JSON
+
+In [main.js](https://github.com/antiPhaseDomain/Silence/blob/master/assets/scripts/main.js) on line [14](https://github.com/antiPhaseDomain/Silence/blob/master/assets/scripts/main.js#L14) is where [fetch](https://css-tricks.com/using-fetch/) is getting it's JSON from.
+
+
 
