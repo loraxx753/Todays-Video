@@ -4,7 +4,7 @@
 
 HTML Template for [Panopticon](https://github.com/antiPhaseDomain/Panopticon) to use.
 
-You can use this folder structure and write with any of the following features available in IE11:
+## (Verified) Features
 
 * ES6/7
 * CSS Variables
