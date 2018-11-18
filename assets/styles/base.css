@@ -98,3 +98,6 @@ i.e .border { border-width: 1px); border-style: solid); }
 h1,h2,h3,h4,h5,h6, *[font~='header'] { font-family: var(--header-font); }
 body, *[font~="content"]{ font-family: var(--content-font); }
 body { margin: 0 auto; width: 90vw; padding: 0 1vw; overflow: visible}
+summary { user-select: none; }
+summary:hover { cursor: pointer; }
+summary:focus { outline: -webkit-focus-ring-color auto 0px;}
