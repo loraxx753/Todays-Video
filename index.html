@@ -9,12 +9,39 @@
     <title>Silence</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="https://cdn.rawgit.com/showdownjs/showdown/1.9.0/dist/showdown.min.js"></script>
 </head>
 <body>
+    <header>
+        <h1>Silence 🤫</h1>
+        <p>&lt;json-swagger&gt;&lt;/json-swagger&gt; should equal 2.0, It is <json-swagger></json-sawgger></p>
+    </header>
 
-    <h1>Silence 🤫</h1>
-    <p>&lt;json-swagger&gt;&lt;/json-swagger&gt; should equal 2.0, It is <json-swagger></json-sawgger></p>
 
+    <main>
+        <section>
+            <h2>Swagger</h2>
+            <p><json-swagger></json-swagger></p>
+            <h2>Info</h2>
+            <json-info>
+                <ul>
+                    <li>Description: <info-description></info-description></li>
+                    <li>Version: <info-version></info-version></li>
+                    <li>Title: <info-title></info-title></li>
+                    <li>Terms Of Service: <info-termsOfService></info-termsOfService></li>
+                    <li>Contact: <info-contact><contact-email></contact-email></info-contact></li>
+                    <li>License: <info-license><license-name></license-name></info-license></li>
+                </ul>
+            </json-info>
+        </section>
+        <aside>
+            <json-debug></json-debug>
+        </aside>
+    
+    </main>
+    <footer>
+
+    </footer>
     <script defer src="webpack-hook.js"></script>
     
 </body>

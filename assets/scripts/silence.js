@@ -6,9 +6,32 @@ const setJsonChildren = (element, object) => {
   for(let key in object) {
     const child_tag = `${element_key}-${key}`
     const el = element.querySelector(child_tag);
-    // console.log(child_tag, el)
+    if(el) {
+      handleValueType(key, object[key], el);    
+    } else if(!element.firstChild) {
+      handleValueType(key, JSON.stringify(object, null, 2), element)
+    }
   }
 }
+
+const handleValueType = (key, value, element) => {
+  switch (typeof value) {
+    case 'string':
+    case 'number':
+      const textNode = document.createTextNode(value)
+      element.appendChild(textNode)
+      break;
+    case 'array':
+      console.log("it's an array")
+      break;
+    case 'object':
+      setJsonChildren(element, value)
+      break;
+    default:
+      break;
+  }
+}
+
 
 (async () => {
   const url = "https://petstore.swagger.io/v2/swagger.json"
@@ -18,19 +41,18 @@ const setJsonChildren = (element, object) => {
 
   for(let key in json) { 
 
-    window.localStorage.setItem(key, json[key]);
-    const json_element = document.querySelector(`json-${key}`)
-    if(json_element) {
-      if(typeof json[key] == 'object') {
-        setJsonChildren(json_element, json[key])
-      }
-      const safe_text = (typeof json[key] !== 'string' && typeof json[key] !== 'number') ? JSON.stringify(json[key], null, 2) : json[key]
-      const textNode = document.createTextNode(safe_text)
-      json_element.appendChild(textNode);
-      // json_element.replaceWith(textNode)
-     }
+    const json_elements = document.querySelectorAll(`json-${key}`)
+    for(let json_element of json_elements) {
+      handleValueType(key, json[key], json_element)
+    }
   }
 
-  if(document.querySelector('json-debug')) document.querySelector('json-debug').innerHTML = `<pre><code>${JSON.stringify(json, null, 2)}</code></pre>`
+
+  if(document.querySelector('json-debug')) document.querySelector('json-debug').innerHTML = `<details>
+    <summary>Current JSON Object</summary>
+    <pre><code>
+      ${JSON.stringify(json, null, 2)}
+    </code></pre>
+  </details>`
 })()
 
