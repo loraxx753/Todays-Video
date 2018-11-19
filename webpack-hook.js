@@ -28,21 +28,24 @@ function addScript(src, callback, options) {
     legacy: thisIsALegacyBrowser,
   }
 
-  if (thisIsALegacyBrowser) {
-    addScript(polyfills['css-variables'], function() {
-        cssVars();
-    });
-    addScript(polyfills['css-polyfills'])
-    addScript(polyfills['custom-elements'], function() {
-      addScript(polyfills['regenerator-runtime'], function() {
-        addScript(polyfills['main.js'])
-      })        
-    })
-  } else { // this is a modern browser
-    addScript('assets/scripts/main.js', function() {
-    }, { type: "module" })
-  }
+  addScript('https://cdn.rawgit.com/showdownjs/showdown/1.9.0/dist/showdown.min.js', function() {
 
+    if (thisIsALegacyBrowser) {
+      addScript(polyfills['css-variables'], function() {
+          cssVars();
+      });
+      addScript(polyfills['css-polyfills'])
+      addScript(polyfills['custom-elements'], function() {
+        addScript(polyfills['regenerator-runtime'], function() {
+          addScript(polyfills['main.js'])
+        })        
+      })
+    } else { // this is a modern browser
+      addScript('assets/scripts/main.js', function() {
+      }, { type: "module" })
+    }
+  })
+  
   if ('serviceWorker' in navigator && false) {
     window.addEventListener('load', () => {
       navigator.serviceWorker

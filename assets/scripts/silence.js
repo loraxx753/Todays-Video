@@ -56,6 +56,7 @@ const handleValueType = (key, value, element) => {
 
 
 (async () => {
+  console.log(document.querySelector('script').getAttribute('href'))
   const url = "https://petstore.swagger.io/v2/swagger.json"
 
   const json = await fetch(url)
