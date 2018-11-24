@@ -7,8 +7,10 @@
     --color-teal: #39CCCC;
     --color-olive: #3D9970;
     --color-green: #2ECC40;
+    --color-green--rgb: 46, 204, 64;
     --color-lime: #01FF70;
     --color-yellow: #FFDC00;
+    --color-yellow--rgb: 255, 220, 0;
     --color-orange: #FF851B;
     --color-red: #FF4136;
     --color-fuchsia: #F012BE;
@@ -16,8 +18,10 @@
     --color-maroon: #85144B;
     --color-white: #FFFFFF;
     --color-silver: #DDDDDD;
+    --color-silver--rgb: 221, 221 ,221;
     --color-gray: #AAAAAA;
+    --color-gray--rgb: 170, 170, 170;
     --color-black: #111111;
-    --header-font: 'Raleway';
-    --content-font: 'Roboto Slab';
+    --header-font: 'Alegreya';
+    --content-font: 'Lato';
 }

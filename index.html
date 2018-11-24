@@ -4,28 +4,35 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <link rel="icon" href="/assets/meta/icon/favicon.ico">
-    
-    <title>Truffula</title>
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/meta/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/meta/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/meta/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/assets/meta/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/assets/meta/iconss/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/assets/meta/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Todays Video</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="/assets/meta/manifest.json">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <script src="https://cdn.rawgit.com/showdownjs/showdown/1.9.0/dist/showdown.min.js"></script>
+    <script>
+        window.source = "/assets/data/videos.json"
+    </script>
 </head>
 <body>
+
     <header>
-        <h1>Truffula</h1>
-    </header>
-    <aside>
-        <p>Enjoy the <a href="silence.html">Silence</a></p>
-    </aside>
+    <h1>Today's Video</h1>
+</header>
+<main></main>
+<footer></footer>
 
-    <main>
-    </main>
-    <footer>
 
-    </footer>
-    <script defer src="webpack-hook.js"></script>
+
+
+    <script debug defer src="webpack-hook.js"></script>
     
 </body>
 </html>
