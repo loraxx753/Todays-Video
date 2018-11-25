@@ -1,0 +1,104 @@
+@import url('/assets/styles/theme.css');
+@import url('/assets/styles/base.css');
+
+/*
+CSS Grid: https://css-tricks.com/snippets/css/complete-guide-grid/
+Updating a CSS Variable with JavaScript: https://css-tricks.com/updating-a-css-variable-with-javascript/
+*/
+
+:root {
+    --sidebar-width: 0;
+}
+
+pre {
+    display: inline-block;
+}
+
+ol li:first-child {
+    counter-reset: my-counter;
+}
+ol li::before {
+    content: counter(my-counter) ". ";
+	counter-increment: my-counter;
+}
+
+.open-sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 30px;
+    color: var(--color-black);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.open-sidebar::before {
+    content: "< ";
+}
+
+
+a.close-sidebar::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 15px;
+    content: "X";
+    color: var(--color-black);
+}
+
+silence-api {
+    display: block;
+}
+
+todays-videos {
+    display: block;
+}
+
+main {
+    grid-area: main;
+}
+
+
+aside {
+    display: block;
+    grid-area: sidebar;
+    background: var(--color-silver);
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: var(--sidebar-width, 80vw);
+    transition: width 0.68s;
+    overflow-y: scroll;
+    /* width: 0; */
+}
+
+aside h3 {
+    text-align: right;
+    margin: 10px;
+}
+
+aside video-item {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+}
+
+aside video-item img {
+    width: 100%;
+}
+
+aside video-item p {
+    margin: 0;
+    padding: 0;
+}
+
+aside video-item div {
+    margin-left: 10px;
+
+}
+
+aside video-item {
+    padding: 10px 0 10px 10px;
+    border-bottom: 1px solid rgba(var(--color-gray--rgb), 1);
+}
