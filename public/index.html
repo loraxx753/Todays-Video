@@ -22,7 +22,19 @@
     </script>
     <script src="https://cdn.rawgit.com/showdownjs/showdown/1.9.0/dist/showdown.min.js"></script>
     <script type="module" src="script.js"></script>
-
+    <style>
+        [warning] {
+            background: var(--color-yellow);
+            font-weight: bolder;
+            color: rgba(var(--color-black-rgb), 0);
+            padding: 1vw;
+            text-transform: uppercase;
+            font-size: 3vw;
+            max-width: 1140px;
+            margin: 0 auto;
+            border-radius: 1vw;
+        }
+    </style>
 </head>
 <body>
 
@@ -33,13 +45,18 @@
     <silence-api url="/assets/data/videos.json" name="todays">
         <main>
             <todays-videos array limit="1">
-                <section id="current-video">
+                <section id="current-video">    
                     <h2 array-title>Youtube Video Title</h2>
                     <p><small><i array-date></i></small></p>
+                    <details>
+                        <summary>Hey! Click, tap, interact here!</summary>
+                        <p color="blue">Sorry yesterday's video was missed, I've been sick 🙁.</p>
+                        <p color="blue">To make up for it, this longer form video is worth two!</p>
+                    </details>
+
                     <div class="iframeVideo">
                         <iframe style="max-width: 90vw" src="https://www.youtube.com/embed/${array-id}?controls=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
-                        
                 </section>
             </todays-videos>
         </main>
